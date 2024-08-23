@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="../img/logo.png" alt="Logo">
+            <h2>M & Company<br>L'Atelier</h2>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#home">Vans</a></li>
+                <li><a href="#about">Peinture<i> Raptor</i></a></li>
+                <li><a href="#services">Remorques</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#id">Connectez vous</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div id="container">
+        <div id="vignette-container">
+
+        </div>
+    </div>
+    <button id="add-vignette-btn">Ajouter une Vignette</button>
+
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h2>Ajouter une Vignette</h2>
+            <label for="vignette-text">Texte :</label>
+            <input type="text" id="vignette-text" placeholder="Entrez le texte">
+            
+            <label for="vignette-value">Valeur :</label>
+            <input type="number" id="vignette-value" placeholder="Entrez la valeur">
+            
+            <label for="vignette-image">Image URL :</label>
+            <input type="file" id="vignette-image" class="hidden">
+            <label for="vignette-image" class="file-button">Choisissez une image</label>
+            
+            <button id="validate-btn">Valider</button>
+            <button id="close-popup-btn">Fermer</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

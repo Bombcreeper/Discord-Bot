@@ -3,69 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Background</title>
+    <title>Fenêtre de Login</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="header">
         <div class="logo">
-            <a href="index.html"></a>
-            <img src="../img/logo.png" alt="Logo">
-            <h2>M & Company<br>L'Atelier</h2>
-        </a>
+            <a href="index.html"><img src="../img/logo.png" alt="Logo"></a>
+            <a href="../index.html" style="text-decoration:none"><h2>M & Company<br>L'Atelier</h2></a>
         </div>
         <nav class="nav">
             <ul>
-                <li><a href="../van/index.html">Vans</a></li>
+                <li><a href="../van/index.html">Solaire</a></li>
                 <li><a href="#about">Peinture<i> Raptor</i></a></li>
-                <li><a href="#services">Remorques</a></li>
-                <li><a href="../Test/index.html">Contact</a></li>
+                <li><a href="#services">Aménagements</a></li>
+                <li><a href="../Test/index.html">Accessoires</a></li>
                 <li><a href="../id/index.html">Connectez vous</a></li>
             </ul>
         </nav>
     </header>
+    <div class="login-container">
+        <div class="button-container">
+            <button id="btn-particulier" class="toggle-btn active">Particulier</button>
+            <button id="btn-professionnel" class="toggle-btn">Professionnel</button>
+        </div>
 
-    
-    <main>
-        
-            
-            
-            <div class="column-wrapper">
-
-                <div class="column">
-
-                    <div class="field">
-                        <label for="companyName">Nom de société</label>
-                        <input type="text" name="companyName" placeholder="Entrez le nom de votre société">
-                        <p class="error"></p>
-                    </div>
-                    
-                    
-                    
-
-                    <div class="field">
-                        <label for="companyContactAddress">Contact E-mail :</label>
-                        <input type="email" name="companyContactAddress" placeholder="Entrez une adresse de contact">
-                        <p class="error"></p>
-                    </div>
-
-                </div>
-                
-                <div class="separator"></div>
-                
-                <div class="column">
-
-                    
-
-                </div>
-                
-            </div>
-            
-            <div class="submit-field">
-                <input type="submit" name="submit" value="Suivant" class="button submit-button">
-                <input type="submit" name="goback" value="Précédent" class="button border-button">
-            </div>
-            
+        <!-- Formulaire pour Particulier -->
+        <form id="form-particulier" class="form active">
+            <h2>Connexion Particulier</h2>
+            <input type="email" placeholder="Adresse e-mail" required>
+            <input type="password" placeholder="Mot de passe" required>
+            <button type="submit">Se connecter</button>
         </form>
 
-    </main>
+        <!-- Formulaire pour Professionnel -->
+        <form id="form-professionnel" class="form">
+            <h2>Connexion Professionnel</h2>
+            <input type="email" placeholder="Adresse e-mail" required>
+            <input type="password" placeholder="Mot de passe" required>
+            <input type="text" placeholder="Numéro SIRET" required>
+            <input type="text" placeholder="Nom de l'entreprise" required>
+            <button type="submit">Se connecter</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
